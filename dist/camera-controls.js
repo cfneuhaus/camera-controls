@@ -224,6 +224,7 @@
 	    _this.truckSpeed = 2.0;
 	    _this.dollyToCursor = false;
 	    _this.verticalDragToForward = false;
+	    _this.invertMouseWheel = false;
 	    _this.domElement = domElement; // the location of focus, where the object orbits around
 
 	    _this._target = new THREE.Vector3();
@@ -335,6 +336,10 @@
 	          elementRect = scope.domElement.getBoundingClientRect();
 	          x = (event.clientX - elementRect.left) / elementRect.width * 2 - 1;
 	          y = (event.clientY - elementRect.top) / elementRect.height * -2 + 1;
+	        }
+
+	        if (this.invertMouseWheel) {
+	          delta = -delta;
 	        }
 
 	        dollyInternal(-delta, x, y);

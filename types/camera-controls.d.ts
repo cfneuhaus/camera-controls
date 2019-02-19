@@ -33,6 +33,7 @@ export default class CameraControls extends EventDispatcher {
   public truckSpeed: number;
   public dollyToCursor: boolean;
   public verticalDragToForward: boolean;
+  public invertMouseWheel: boolean;
 
   // public methods
   public rotate( azimuthAngle: number, polarAngle: number, enableTransition?: boolean ): void;
