@@ -248,7 +248,7 @@ export default class CameraControls extends EventDispatcher {
 
 				}
 
-				if ( this.invertMouseWheel ) {
+				if ( scope.invertMouseWheel ) {
 
 					delta = - delta;
 					
