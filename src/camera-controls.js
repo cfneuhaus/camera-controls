@@ -838,6 +838,7 @@ export default class CameraControls extends EventDispatcher {
 			truckSpeed           : this.truckSpeed,
 			dollyToCursor        : this.dollyToCursor,
 			verticalDragToForward: this.verticalDragToForward,
+			invertMouseWheel     : this.invertMouseWheel,
 
 			target               : this._targetEnd.toArray(),
 			position             : this.object.position.toArray(),
@@ -867,6 +868,7 @@ export default class CameraControls extends EventDispatcher {
 		this.truckSpeed            = obj.truckSpeed;
 		this.dollyToCursor         = obj.dollyToCursor;
 		this.verticalDragToForward = obj.verticalDragToForward;
+		this.invertMouseWheel      = obj.invertMouseWheel;
 
 		this._target0.fromArray( obj.target0 );
 		this._position0.fromArray( obj.position0 );
