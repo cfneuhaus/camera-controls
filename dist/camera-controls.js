@@ -338,7 +338,7 @@
 	          y = (event.clientY - elementRect.top) / elementRect.height * -2 + 1;
 	        }
 
-	        if (this.invertMouseWheel) {
+	        if (scope.invertMouseWheel) {
 	          delta = -delta;
 	        }
 
