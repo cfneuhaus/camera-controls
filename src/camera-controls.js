@@ -64,6 +64,7 @@ export default class CameraControls extends EventDispatcher {
 		this.truckSpeed = 2.0;
 		this.dollyToCursor = false;
 		this.verticalDragToForward = false;
+		this.invertMouseWheel = false;
 
 		this.domElement = domElement;
 
@@ -246,6 +247,14 @@ export default class CameraControls extends EventDispatcher {
 					y = ( event.clientY - elementRect.top )  / elementRect.height * - 2 + 1;
 
 				}
+
+				if ( this.invertMouseWheel ) {
+
+					delta = - delta;
+					
+				}
+
+
 
 				dollyInternal( - delta, x, y );
 
